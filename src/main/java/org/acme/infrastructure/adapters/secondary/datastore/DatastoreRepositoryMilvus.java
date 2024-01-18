@@ -132,6 +132,7 @@ public class DatastoreRepositoryMilvus implements DatastoreRepository {
 
     private void buildIndex(String collectionName) {
         IndexType INDEX_TYPE = IndexType.IVF_FLAT;
+        String INDEX_PARAM = "{\"nlist\":1024}";
 
         R<RpcStatus> ret = this.connection.getClient().createIndex(
                 CreateIndexParam.newBuilder()
@@ -139,6 +140,7 @@ public class DatastoreRepositoryMilvus implements DatastoreRepository {
                         .withFieldName("embedding")
                         .withIndexType(INDEX_TYPE)
                         .withMetricType(MetricType.COSINE)
+                        .withExtraParam(INDEX_PARAM)
                         .build()
         );
 
