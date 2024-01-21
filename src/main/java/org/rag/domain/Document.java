@@ -1,4 +1,4 @@
-package org.acme.domain;
+package org.rag.domain;
 
 import lombok.Builder;
 import lombok.Data;

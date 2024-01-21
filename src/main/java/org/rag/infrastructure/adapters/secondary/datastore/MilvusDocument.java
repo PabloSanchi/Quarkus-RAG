@@ -1,4 +1,4 @@
-package org.acme.infrastructure.adapters.secondary.datastore;
+package org.rag.infrastructure.adapters.secondary.datastore;
 
 import lombok.Builder;
 import lombok.Data;

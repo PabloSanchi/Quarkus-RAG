@@ -1,4 +1,4 @@
-package org.acme.infrastructure.adapters.primary.command;
+package org.rag.infrastructure.adapters.primary.command;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
@@ -6,10 +6,7 @@ import lombok.*;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-public class SearchCommand {
+public class CreateDeleteCommand {
     @JsonProperty("collectionName")
     private String collectionName;
-
-    @JsonProperty("query")
-    private String query;
 }

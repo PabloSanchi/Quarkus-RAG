@@ -1,4 +1,4 @@
-package org.acme.infrastructure.utils;
+package org.rag.infrastructure.utils;
 
 import ai.djl.huggingface.translator.TextEmbeddingTranslatorFactory;
 import ai.djl.inference.Predictor;

@@ -1,4 +1,4 @@
-package org.acme.infrastructure.adapters.secondary.datastore;
+package org.rag.infrastructure.adapters.secondary.datastore;
 
 import io.milvus.client.MilvusServiceClient;
 import io.milvus.grpc.ShowCollectionsResponse;

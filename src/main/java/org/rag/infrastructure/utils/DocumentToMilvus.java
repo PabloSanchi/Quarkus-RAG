@@ -1,8 +1,8 @@
-package org.acme.infrastructure.utils;
+package org.rag.infrastructure.utils;
 
 import io.milvus.param.dml.InsertParam;
 import jakarta.enterprise.context.ApplicationScoped;
-import org.acme.infrastructure.adapters.secondary.datastore.MilvusDocument;
+import org.rag.infrastructure.adapters.secondary.datastore.MilvusDocument;
 
 import java.util.ArrayList;
 import java.util.List;

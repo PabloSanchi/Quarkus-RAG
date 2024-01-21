@@ -1,9 +1,9 @@
-package org.acme.application.services;
+package org.rag.application.services;
 
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
-import org.acme.application.ports.DatastoreRepository;
-import org.acme.domain.Document;
+import org.rag.application.ports.DatastoreRepository;
+import org.rag.domain.Document;
 
 import java.util.List;
 

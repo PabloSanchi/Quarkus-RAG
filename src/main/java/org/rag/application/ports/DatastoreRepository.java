@@ -1,6 +1,6 @@
-package org.acme.application.ports;
+package org.rag.application.ports;
 
-import org.acme.domain.Document;
+import org.rag.domain.Document;
 
 import java.util.List;
 

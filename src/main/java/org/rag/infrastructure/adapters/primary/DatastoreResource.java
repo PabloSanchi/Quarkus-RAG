@@ -1,14 +1,13 @@
-package org.acme.infrastructure.adapters.primary;
+package org.rag.infrastructure.adapters.primary;
 
-import jakarta.enterprise.inject.build.compatible.spi.Validation;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
-import org.acme.application.services.DatastoreService;
-import org.acme.domain.Document;
-import org.acme.infrastructure.adapters.primary.command.CreateDeleteCommand;
-import org.acme.infrastructure.adapters.primary.command.InsertDocumentCommand;
-import org.acme.infrastructure.adapters.primary.command.SearchCommand;
+import org.rag.application.services.DatastoreService;
+import org.rag.domain.Document;
+import org.rag.infrastructure.adapters.primary.command.CreateDeleteCommand;
+import org.rag.infrastructure.adapters.primary.command.InsertDocumentCommand;
+import org.rag.infrastructure.adapters.primary.command.SearchCommand;
 
 import java.util.List;
 

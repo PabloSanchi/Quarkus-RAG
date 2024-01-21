@@ -1,4 +1,4 @@
-package org.acme.infrastructure.adapters.secondary.datastore;
+package org.rag.infrastructure.adapters.secondary.datastore;
 
 import io.milvus.grpc.DataType;
 import io.milvus.grpc.SearchResultData;
@@ -13,10 +13,10 @@ import io.milvus.param.dml.SearchParam;
 import io.milvus.param.index.CreateIndexParam;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
-import org.acme.application.ports.DatastoreRepository;
-import org.acme.domain.Document;
-import org.acme.infrastructure.utils.DocumentToMilvus;
-import org.acme.infrastructure.utils.EmbeddingUtil;
+import org.rag.application.ports.DatastoreRepository;
+import org.rag.domain.Document;
+import org.rag.infrastructure.utils.DocumentToMilvus;
+import org.rag.infrastructure.utils.EmbeddingUtil;
 
 import java.util.List;
 
