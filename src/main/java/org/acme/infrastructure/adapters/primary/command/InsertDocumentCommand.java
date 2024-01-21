@@ -4,6 +4,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import org.acme.domain.Document;
 import lombok.*;
 
+import java.util.List;
+
 
 @Getter
 @NoArgsConstructor
@@ -13,5 +15,5 @@ public class InsertDocumentCommand {
     private String collectionName;
 
     @JsonProperty("document")
-    private Document document;
+    private List<Document> documents;
 }

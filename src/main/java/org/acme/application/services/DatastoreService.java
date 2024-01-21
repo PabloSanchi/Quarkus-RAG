@@ -29,8 +29,8 @@ public class DatastoreService {
         return this.datastoreRepository.listCollections();
     }
 
-    public void insertDocument(String collectionName, Document document) {
-        this.datastoreRepository.insertDocument(collectionName, document);
+    public void insertDocuments(String collectionName, List<Document> document) {
+        this.datastoreRepository.insertDocuments(collectionName, document);
     }
 
     public List<Document> search(String collectionName, String query) {

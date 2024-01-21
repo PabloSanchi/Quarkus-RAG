@@ -10,12 +10,12 @@ import java.util.List;
 @ApplicationScoped
 public class DocumentToMilvus {
 
-    public InsertParam execute(String name, MilvusDocument milvusDocument) {
+    public InsertParam execute(String name, List<MilvusDocument> milvusDocuments) {
 
         List<InsertParam.Field> fields = new ArrayList<>();
-        fields.add(new InsertParam.Field("title", List.of(milvusDocument.getTitle())));
-        fields.add(new InsertParam.Field("content", List.of(milvusDocument.getContent())));
-        fields.add(new InsertParam.Field("embedding", List.of(milvusDocument.getEmbedding())));
+        fields.add(new InsertParam.Field("title", milvusDocuments.stream().map(MilvusDocument::getTitle).toList()));
+        fields.add(new InsertParam.Field("content", milvusDocuments.stream().map(MilvusDocument::getContent).toList()));
+        fields.add(new InsertParam.Field("embedding", milvusDocuments.stream().map(MilvusDocument::getEmbedding).toList()));
 
         return InsertParam.newBuilder()
                 .withCollectionName(name)
@@ -23,4 +23,3 @@ public class DocumentToMilvus {
                 .build();
     }
 }
-

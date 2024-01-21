@@ -47,9 +47,9 @@ public class DatastoreResource {
     @Path("/insert")
     @Consumes(MediaType.APPLICATION_JSON)
     public void insertDocument(InsertDocumentCommand insertDocumentCommand) {
-        this.datastoreService.insertDocument(
+        this.datastoreService.insertDocuments(
                 insertDocumentCommand.getCollectionName(),
-                insertDocumentCommand.getDocument()
+                insertDocumentCommand.getDocuments()
         );
     }
 

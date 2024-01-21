@@ -10,6 +10,6 @@ public interface DatastoreRepository {
 
     public List<String> listCollections();
 
-    public void insertDocument(String collectionName, Document document);
+    public void insertDocuments(String collectionName, List<Document> document);
     public List<Document> search(String collectionName, String query);
 }

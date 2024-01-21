@@ -91,14 +91,19 @@ public class DatastoreRepositoryMilvus implements DatastoreRepository {
     }
 
     @Override
-    public void insertDocument(String collectionName, Document document) {
-        MilvusDocument milvusDocument = MilvusDocument.builder()
-                .title(document.getTitle())
-                .content(document.getContent())
-                .embedding(this.embeddingUtil.encode(document.getContent()))
-                .build();
+    public void insertDocuments(String collectionName, List<Document> documents) {
 
-        this.connection.getClient().insert(this.documentToMilvus.execute(collectionName, milvusDocument));
+        List<MilvusDocument> milvusDocuments = documents
+                .stream()
+                .map(doc -> MilvusDocument
+                        .builder()
+                        .title(doc.getTitle())
+                        .content(doc.getContent())
+                        .embedding(this.embeddingUtil.encode(doc.getContent()))
+                        .build()
+                ).toList();
+
+        this.connection.getClient().insert(this.documentToMilvus.execute(collectionName, milvusDocuments));
     }
 
     @Override
